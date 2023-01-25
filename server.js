@@ -227,7 +227,7 @@ app.get("/employees/:employeeId", ensureLogin, (req, res) => {
       if (viewData.employee == null) { // if no employee - return an error
          res.status(404).send("Employee Not Found");
       } else {
-         console.log("viewData:", viewData);
+         // console.log("viewData:", viewData);
          res.render("employee", { viewData: viewData }); // render the "employee" view
       }
    }).catch((err)=>{
@@ -272,6 +272,7 @@ app.get("/employees/delete/:employeeId", ensureLogin, (req, res)=>{
    dataService.deleteEmployeeById(id).then((data)=>{
       res.redirect("/employees");
    }).catch((err)=>{
+      console.log(err)
       res.status(500).send("Unable to Remove Employee / Employee not found)"); 
    });
 })

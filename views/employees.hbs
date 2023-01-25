@@ -20,25 +20,37 @@
                   <th>Hire Date</th>
                </tr>
             </thead>
+            {{#if session.user.isAdmin}}
             {{#each employees}}
                <tbody>
                   <tr>
-                     <td><a href="employees/{{employeeId}}">{{employeeId}}</a></td>
+                     <td><a href="employees/{{employeeID}}">{{employeeID}}</a></td>
                      <td>{{firstName}} {{lastName}}</td>
                      <td><a href="mailto:{{email}}">{{email}}</a></td>
                      <td>{{addressStreet}} {{addressCity}} {{addressState}} {{addressPostal}}</td>
                      <td><a href="/employees?status={{status}}">{{status}}</a></td>
                      <td><a href="/employees?department={{department}}">{{department}}</a></td>
-                     {{#if session.user.isAdmin}}
                      <td>{{salary}}</td>
-                     {{/if}}
                      <td>{{hireDate}}</td>
-                     {{#if session.user.isAdmin}}
-                     <td><a href="/employees/delete/{{employeeId}}" class="btn btn-danger">remove</a></td>
-                     {{/if}}
+                     <td><a href="/employees/delete/{{employeeID}}" class="btn btn-danger">remove</a></td>
                   </tr>
                </tbody>
             {{/each}}
+            {{else}}
+            {{#each employees}}
+               <tbody>
+                  <tr>
+                     <td><a href="employees/{{employeeID}}">{{employeeID}}</a></td>
+                     <td>{{firstName}} {{lastName}}</td>
+                     <td><a href="mailto:{{email}}">{{email}}</a></td>
+                     <td>{{addressStreet}} {{addressCity}} {{addressState}} {{addressPostal}}</td>
+                     <td><a href="/employees?status={{status}}">{{status}}</a></td>
+                     <td><a href="/employees?department={{department}}">{{department}}</a></td>
+                     <td>{{hireDate}}</td>
+                  </tr>
+               </tbody>
+            {{/each}}
+            {{/if}}
          </table>
             {{#unless employees}}
             <div class="col-md-12 text-center">

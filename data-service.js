@@ -109,6 +109,7 @@ function addEmployee(employeeData){
          .then((data) => {
             resolve(data);
          }).catch((err)=>{
+            console.log(err);
             reject("unable to create employee");
          });
    });
@@ -129,7 +130,7 @@ function getEmployeesByStatus(status){
 function getEmployeesByDepartmentId(departmentId){
    return new Promise(function (resolve, reject) {
       Employee.findAll({
-         where: { departmentId: departmentId }
+         where: { department: departmentId }
       }).then((data) => {
          resolve(data);
       }).catch((err) => {
@@ -174,6 +175,7 @@ function updateEmployee(employeeData){
          console.log("successfully updated. employeeData.employeeID: ", employeeData.employeeID);
          resolve();
       }).catch((e) => {
+         console.log(e)
          reject("unable to update employee"); 
       });
    });

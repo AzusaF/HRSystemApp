@@ -9,8 +9,8 @@ This web app is deployed at
 
 | userID | password | access | 
 |---|---|---|
-| admin | admin | full access |
-| test | test | limited access |
+| AdminUser | password1 | full access |
+| TestUser | password2 | limited access |
 
 Try the app yourself!
 

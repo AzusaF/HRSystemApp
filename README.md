@@ -5,7 +5,7 @@ When ID is admin, you have full access to the app. Otherwise, your access is lim
 
 ## Try the app
 
-This web app is deployed at 
+This web app is deployed at [https://hr-system-app.cyclic.app/](https://hr-system-app.cyclic.app/)
 
 | userID | password | access | 
 |---|---|---|

@@ -1,0 +1,50 @@
+<div class="row">
+   <div class="col-md-12">
+      <h2>Employees{{#if session.user.isAdmin}}
+                  <a href="/employees/add" class="btn btn-success pull-right">Add New Employee</a>
+                  {{/if}}</h2>
+      <hr />
+      <div class="table-responsive">
+         <table class="table">
+            <thead>
+               <tr>
+                  <th>Employee ID</th>
+                  <th>Full Name</th>
+                  <th>Email</th>
+                  <th>Address</th>
+                  <th>Status</th>
+                  <th>Department</th>
+                  {{#if session.user.isAdmin}}
+                  <th>Salary</th>
+                  {{/if}}
+                  <th>Hire Date</th>
+               </tr>
+            </thead>
+            {{#each employees}}
+               <tbody>
+                  <tr>
+                     <td><a href="employees/{{employeeId}}">{{employeeId}}</a></td>
+                     <td>{{firstName}} {{lastName}}</td>
+                     <td><a href="mailto:{{email}}">{{email}}</a></td>
+                     <td>{{addressStreet}} {{addressCity}} {{addressState}} {{addressPostal}}</td>
+                     <td><a href="/employees?status={{status}}">{{status}}</a></td>
+                     <td><a href="/employees?department={{department}}">{{department}}</a></td>
+                     {{#if session.user.isAdmin}}
+                     <td>{{salary}}</td>
+                     {{/if}}
+                     <td>{{hireDate}}</td>
+                     {{#if session.user.isAdmin}}
+                     <td><a href="/employees/delete/{{employeeId}}" class="btn btn-danger">remove</a></td>
+                     {{/if}}
+                  </tr>
+               </tbody>
+            {{/each}}
+         </table>
+            {{#unless employees}}
+            <div class="col-md-12 text-center">
+               <strong>{{message}}</strong>
+            </div>
+            {{/unless}}
+      </div>
+   </div>
+</div>

@@ -12,6 +12,15 @@ This web app is deployed at [https://hr-system-app.cyclic.app/](https://hr-syste
 | AdminUser | password1 | full access |
 | TestUser | password2 | limited access |
 
+When you login as AdminUser, you can see saraly and remove or update employees and departments.
+![Screen Shot 2023-01-25 at 14 51 14](https://user-images.githubusercontent.com/95828247/214676796-de6ad803-e080-4c86-84fb-723908823746.png)
+![Screen Shot 2023-01-25 at 14 53 41](https://user-images.githubusercontent.com/95828247/214676899-b15c3242-011e-4506-8f7d-51064fc6e813.png)
+
+When you login as TestUser which is not admin, you are no longer access to those information and those functions.
+![Screen Shot 2023-01-25 at 14 50 33](https://user-images.githubusercontent.com/95828247/214677199-9a879840-24d2-405d-9677-e0eae225161c.png)
+![Screen Shot 2023-01-25 at 14 50 48](https://user-images.githubusercontent.com/95828247/214677224-ced4ff61-6b19-457d-b74c-30474fbe8afe.png)
+
+
 Try the app yourself!
 
 ## Key Features

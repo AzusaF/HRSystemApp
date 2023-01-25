@@ -7,7 +7,7 @@ When ID is admin, you have full access to the app. Otherwise, your access is lim
 
 This web app is deployed at 
 
-| userID | password | access |
+| userID | password | access | 
 | admin | admin | full access |
 | test | test | limited access |
 

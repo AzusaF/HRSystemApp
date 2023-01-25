@@ -1,15 +1,3 @@
-/*********************************************************************************
-*  WEB322 – Assignment 06
-*  I declare that this assignment is my own work in accordance with Seneca  Academic Policy. No part 
-*  of this assignment has been copied manually or electronically from any other source 
-*  (including 3rd party web sites) or distributed to other students.
-* 
-*  Name: ___Azusa Fukuda____ Student ID: ___109697219___ Date: ____11/30/2022_____
-*
-*  Online (Cyclic) Link: https://erin-cute-codfish.cyclic.app
-*
-********************************************************************************/ 
-
 
 const express = require("express");
 const app = express();

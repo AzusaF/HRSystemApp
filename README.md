@@ -8,7 +8,7 @@ When ID is admin, you have full access to the app. Otherwise, your access is lim
 
 - CRUD app using Node.js and Express.js on the back-end
 - Used Postgres database to store all the data added by user
-- User data and its activity is stored using MongoDB
+- User data and their activity is stored using MongoDB
 - Password stored as hashed passwords using bcrypt.js
 - Built interface using Handlebars to render data visually in the browser using .hbs
 - Used Bootstrap to style the app
